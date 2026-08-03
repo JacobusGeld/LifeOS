@@ -144,24 +144,173 @@ src/
 
 ---
 
-## Milestone 1.5 - Routing
+# Milestone 1.5 – Application Shell
 
-### Objectives
+> **Purpose:** Build the foundation of the Life OS user experience by creating the application's routing, layouts, navigation, and public/authenticated experiences.
+
+---
+
+## Objectives
+
+### Routing
 
 - [ ] Install React Router
-- [ ] Create layouts
-- [ ] Create routes
-    - Home
-    - Dashboard
-    - Settings
-- [ ] Create pages
-- [ ] Create navigation
+- [ ] Configure application routing
+- [ ] Configure protected routes
 
-**Completion Criteria**
+### Public Experience
 
-- Navigation works.
-- URLs change correctly.
-- Layout is reusable.
+- [ ] Create public layout
+- [ ] Create Home page
+- [ ] Create Login page
+- [ ] Create Register page
+
+### Application Experience
+
+- [ ] Create application layout
+- [ ] Create Dashboard page
+- [ ] Create Settings page
+
+### Navigation
+
+- [ ] Configure public navigation
+- [ ] Configure application navigation
+
+---
+
+# Application Structure
+
+```
+LifeOS
+│
+├── Public Website
+│   │
+│   ├── Home
+│   ├── Login
+│   ├── Register
+│   └── About (Future)
+│
+└── Application
+    │
+    ├── Dashboard
+    ├── Character (Future)
+    ├── Activities (Future)
+    ├── Quests (Future)
+    ├── Achievements (Future)
+    ├── Campaigns (Future)
+    └── Settings
+```
+
+---
+
+# Route Structure
+
+| Route | Purpose | Authentication |
+|--------|---------|----------------|
+| `/` | Home | No |
+| `/login` | Login | No |
+| `/register` | Register | No |
+| `/app` | Dashboard | Yes |
+| `/app/settings` | Settings | Yes |
+
+Future routes:
+
+| Route |
+|-------|
+| `/app/character` |
+| `/app/activities` |
+| `/app/quests` |
+| `/app/achievements` |
+| `/app/campaigns` |
+
+---
+
+# Layout Structure
+
+```
+layouts/
+│
+├── PublicLayout.tsx
+└── AppLayout.tsx
+```
+
+## Public Layout
+
+Used for:
+
+- Home
+- Login
+- Register
+- Future marketing pages
+
+Example:
+
+```
+┌──────────────────────────────────────────┐
+│ Logo        Features     Login Register  │
+├──────────────────────────────────────────┤
+│                                          │
+│              Current Page                │
+│                                          │
+└──────────────────────────────────────────┘
+```
+
+---
+
+## App Layout
+
+Used after authentication.
+
+Example:
+
+```
+┌─────────────────────────────────────────────────────┐
+│ Header                                              │
+├───────────────┬─────────────────────────────────────┤
+│ Dashboard     │                                     │
+│ Character     │                                     │
+│ Activities    │          Current Page               │
+│ Quests        │                                     │
+│ Settings      │                                     │
+└───────────────┴─────────────────────────────────────┘
+```
+
+---
+
+# Navigation
+
+## Public Navigation
+
+- Home
+- Login
+- Register
+
+## Application Navigation
+
+- Dashboard
+- Settings
+
+Additional navigation items will be added as features are implemented.
+
+---
+
+# Design Principles
+
+- Public pages must not require authentication.
+- All application pages must require authentication.
+- Layouts should be reusable.
+- Pages should remain lightweight and compose components.
+- Navigation should be driven by the routing configuration.
+
+---
+
+# Completion Criteria
+
+- Public pages are accessible.
+- Application pages use a reusable layout.
+- Navigation works correctly.
+- URLs update correctly.
+- Public and authenticated experiences are clearly separated.
 
 ---
 
