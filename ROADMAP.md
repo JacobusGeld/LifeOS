@@ -132,9 +132,9 @@ src/
 
 ### Objectives
 
-- [ ] Configure ESLint
-- [ ] Configure Prettier
 - [ ] Configure EditorConfig
+- [ ] Configure Prettier
+- [ ] Configure ESLint
 - [ ] Verify formatting works
 
 **Completion Criteria**
