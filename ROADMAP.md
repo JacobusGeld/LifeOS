@@ -132,10 +132,10 @@ src/
 
 ### Objectives
 
-- [ ] Configure EditorConfig
-- [ ] Configure Prettier
-- [ ] Configure ESLint
-- [ ] Verify formatting works
+- [x] Configure EditorConfig
+- [x] Configure Prettier
+- [x] Configure ESLint
+- [x] Verify formatting works
 
 **Completion Criteria**
 
@@ -149,12 +149,13 @@ src/
 ### Objectives
 
 - [ ] Install React Router
-- [ ] Create application layout
-- [ ] Create placeholder pages
+- [ ] Create layouts
+- [ ] Create routes
     - Home
     - Dashboard
     - Settings
-- [ ] Configure navigation
+- [ ] Create pages
+- [ ] Create navigation
 
 **Completion Criteria**
 
